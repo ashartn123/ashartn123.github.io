@@ -1,0 +1,467 @@
+
+<!DOCTYPE html><html lang='en' class=''>
+<head><script src='https://static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js'></script><script src='https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" /><link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" /><link rel="canonical" href="https://codepen.io/iPawan/pen/PwNbyv" />
+<style class="cp-pen-styles">/* 
+// Online Responsive Resume
+// Made with ? by @Pawan_Mall
+// http://www.pawanmall.net 
+*/
+
+* { margin: 0; padding: 0; }
+
+body { 
+  background: #f2f2f2; 
+  font-size: 62.5%; 
+  padding: 10px; 
+}
+.myResume-Contact-Info h1 { 
+  font-family: "Simonetta", "Trebuchet MS", Arial, sans-serif; 
+  margin-bottom: 20px;
+  font-size: 40px; 
+}
+.myResume-Contact-Info > h3 { 
+  font-family: "Simonetta", "Trebuchet MS", Arial, sans-serif; 
+  color: #484848; 
+  margin-bottom: 10px; 
+  text-decoration: underline; 
+}
+.myResume-Contact-Info > h6 { 
+  font-family: "Trebuchet MS", Verdana, Arial, sans-serif; 
+  color: #777; 
+  font-weight: normal; 
+  font-size: 1em; 
+}
+
+.myResume{
+  background: #fff; 
+  width:80%;
+  font-family: "Balthazar", "Droid Serif", serif; 
+  color: #565656; 
+  font-size: 1.8em; 
+  line-height: 1.4em; 
+  margin: 3% auto; 
+  padding: 10px 0px 35px 80px; 
+  //padding: 35px;
+    text-shadow: 1px 1px 10px #CCC;
+}
+.myResume-Contact-Info{
+  width:50%;
+  margin-top: 50px; 
+  margin-bottom: 30px;
+  margin-right:100px;
+  float:left;
+}
+.clear{
+  clear:both;
+}
+.myResume-Profile-Pic{
+  width:100%;
+  margin:40px auto;
+}
+.myResume-Profile-Pic img{
+  width:25%;
+  height:auto;  
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+.myResume-Profile-Intro{
+  width:88.5%;
+  margin:10 px auto;
+  text-align:justify;
+  margin-top:50px;
+}
+.myResume-Skills{
+  width:88.5%;
+  margin:10 px auto;
+  text-align:justify;
+  margin-top:50px;
+}
+
+.myResume-Education{ 
+  width:88.5%;
+  margin-top:50px;
+}
+.myResume-Education > ul > li {
+  list-style-type: circle; 
+}
+.myResume-Experience{
+  width:88.5%;
+  margin-top:50px;
+}
+ .myResume-Experience > ul > li {
+  list-style-type: circle; 
+}
+
+h1.title{
+  text-transform: uppercase;
+  font-size: 150%;
+  background-color:#CCC;
+  padding:10px 0px 10px 100px;
+  border-radius:0px 50px 50px 0px;
+  width:80%;
+  margin-bottom:10px;
+  color:#fff;
+  text-shadow: 2px 2px 8px #000;
+  position:relative;
+  left:-85px;
+}
+
+.myResume-Skills-left { 
+  display: block; 
+  float: left; 
+  padding-bottom:20px;
+   margin-left:30px;
+}
+
+.myResume-Skills-right { 
+  display: block; 
+  float: left;
+  margin-left:30px;
+}
+
+
+ul.myResume-Skills-left,ul.myResume-Skills-right { 
+  display: block; 
+}
+ul.myResume-Skills-left > li { 
+  padding-left: 10px; 
+  list-style-type: circle; 
+  vertical-align: top; 
+  font-family: "Balthazar", "Droid Serif", serif; 
+}
+ul.myResume-Skills-right > li { 
+  padding-left: 10px; 
+  list-style-type: circle; 
+  vertical-align: top; 
+  font-family: "Balthazar", "Droid Serif", serif; 
+}
+ul.myResume-Skills-left > li:first-child {
+  list-style-type: none;  
+  font-weight:bolder;
+  font-size:20px;
+  text-decoration:underline;
+}
+ul.myResume-Skills-right > li:first-child { 
+  list-style-type: none;  
+  font-weight:bolder; 
+  font-size:20px;
+  text-decoration:underline;
+}
+
+@media only screen and (max-width: 740px) {
+.myResume{
+  width:90%;
+  font-family: "Balthazar", "Droid Serif", serif; 
+  color: #565656; 
+  padding: 10px;
+  }
+  .myResume-Contact-Info h1{
+    font-size:30px;
+    padding-left:10%;
+  }
+  .myResume-Contact-Info > h3 { 
+   font-size:14px;
+   padding-left:10%;
+}
+.myResume-Contact-Info > h6 { 
+  font-size:13px;
+  padding-left:10%;
+}
+  .myResume-Contact-Info {
+	  width:40%;
+    text-align:center;
+  }
+  .myResume-Profile-Pic{
+  width:60%;
+  margin-right:5%;
+    
+}
+.myResume-Profile-Pic img{
+  width:45%; 
+  float:right;  
+}
+  
+h1.title{
+  font-size: 25px;
+  background-color:#CCC;
+  padding:5px 0px 5px 0px;
+  border-radius:0px;
+  width:100%;
+  margin-bottom:10px;
+  position:relative;
+  left:-35px;
+  text-align:center;  
+}
+.myResume-Profile-Intro{
+  width:90%;  
+  text-align:justify;
+  font-size: 20px;
+  padding-left:18px;  
+}
+.myResume-Skills{
+  width:90%;
+  font-size: 15px;
+  padding-left:18px;      
+}
+.myResume-Education{ 
+  width:90%;
+  font-size: 18px;
+  padding-left:18px;          
+}  
+.myResume-Experience{
+  width:90%;
+  font-size: 18px;
+  padding-left:18px;              
+} 			
+}
+
+@media only screen and (max-width: 570px) {
+  .myResume{
+  width:90%;
+  font-family: "Balthazar", "Droid Serif", serif; 
+  color: #565656; 
+  padding: 10px;
+  }
+  .myResume-Contact-Info h1{
+    font-size:60px;
+    padding-left:10%;
+  }
+  .myResume-Contact-Info > h3 { 
+   font-size:18px;
+   padding-left:10%;
+}
+.myResume-Contact-Info > h6 { 
+  font-size:15px;
+  padding-left:10%;
+}
+  .myResume-Contact-Info {
+	  width:90%;
+    font-size:60%;
+    text-align:center;
+  }
+  .myResume-Profile-Pic{
+  width:90%;
+  margin:auto 6%;
+}
+.myResume-Profile-Pic img{
+  width:70%;
+  margin:auto 15%;  
+}
+  
+h1.title{
+  font-size: 25px;
+  background-color:#CCC;
+  padding:5px 0px 5px 0px;
+  border-radius:0px;
+  width:100%;
+  margin-bottom:10px;
+  position:relative;
+  left:-35px;
+  text-align:center;  
+}
+.myResume-Profile-Intro{
+  width:90%;  
+  text-align:justify;
+  font-size: 20px;
+  padding-left:18px;  
+}
+.myResume-Skills{
+  width:90%;
+  font-size: 15px;
+  padding-left:18px;      
+}
+.myResume-Education{ 
+  width:90%;
+  font-size: 18px;
+  padding-left:18px;          
+}  
+.myResume-Experience{
+  width:90%;
+  font-size: 18px;
+  padding-left:18px;              
+} 	
+}
+
+@media only screen and (max-width: 480px) {
+  .myResume{
+  width:90%;
+  font-family: "Balthazar", "Droid Serif", serif; 
+  color: #565656; 
+  padding: 10px;
+  }
+  .myResume-Contact-Info h1{
+    font-size:40px;
+    padding-left:10%;
+  }
+  .myResume-Contact-Info > h3 { 
+   font-size:13px;
+   padding-left:10%;
+}
+.myResume-Contact-Info > h6 { 
+  font-size:13px;
+  padding-left:10%;
+}
+  .myResume-Contact-Info {
+	  width:90%;
+    font-size:60%;
+    text-align:center;
+  }
+  .myResume-Profile-Pic{
+  width:90%;
+}
+.myResume-Profile-Pic img{
+  width:80%;
+  margin:auto 10%;  
+}
+  
+h1.title{
+  font-size: 25px;
+  background-color:#CCC;
+  padding:5px 0px 5px 0px;
+  border-radius:10px;
+  width:122.0%;
+  margin-bottom:10px;
+  position:relative;
+  left:-32px;
+  text-align:center;  
+}
+.myResume-Profile-Intro{
+  width:90%;  
+  text-align:justify;
+  font-size: 20px;
+  padding-left:18px;  
+}
+.myResume-Skills{
+  width:90%;
+  font-size: 18px;
+  padding-left:18px;      
+}
+.myResume-Education{ 
+  width:90%;
+  font-size: 18px;
+  padding-left:18px;          
+}  
+.myResume-Experience{
+  width:90%;
+  font-size: 18px;
+  padding-left:18px;              
+}  
+  
+}
+
+@media only screen and (max-width: 320px) {
+  .myResume{
+  background: #fff; 
+  width:80%;
+  font-family: "Balthazar", "Droid Serif", serif; 
+  color: #565656; 
+  margin: auto; 
+  padding: 0px 10px 10px 45px;
+  }
+  .myResume-Contact-Info h1{
+    font-size:30px;
+  }
+  .myResume-Contact-Info > h3 { 
+   font-size:12px;
+}
+.myResume-Contact-Info > h6 { 
+  font-size:12px;
+}
+  .myResume-Contact-Info {
+	  width:90%;
+    font-size:60%;
+    text-align:center;
+    margin-left:-15px;
+  }
+  .myResume-Profile-Pic{
+  width:90%;
+  margin:auto 0%;    
+}
+.myResume-Profile-Pic img{
+  width:80%;
+}
+  
+h1.title{
+  font-size: 20px;
+  background-color:#CCC;
+  padding:5px 0px 5px 0px;
+  border-radius:0px 0px 0px 0px;
+  width:146%;
+  margin-bottom:10px;
+  position:relative;
+  left:-41px;
+  text-align:center;  
+}
+.myResume-Profile-Intro{
+  width:90%;
+  text-align:justify;
+  margin-top:50px;
+  font-size: 18px;
+  margin-left:-25px;  
+}
+.myResume-Skills{
+  width:90%;
+  font-size: 15px; 
+  margin-left:-25px;   
+}
+.myResume-Education{ 
+  width:90%;
+  font-size: 15px;
+  margin-left:-25px;   
+}  
+.myResume-Experience{
+  width:90%;
+  font-size: 15px;
+  margin-left:-25px;   
+}  
+}
+</style></head><body>
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="myResume">
+<div class="myResume-Contact-Info">
+<h1>Asha Rudrappa Totagi</h1>
+<h3>Student</h3>
+<h6>Neginahal,Karnataka,INDIA</h6>
+<h6>email:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ea8b99828b989e859e8b8d83dbd8d9aa8d878b86c4898587">[email&#160;protected]</a></h6>
+</div>
+<div class="clear"></div>
+<div class="myResume-Skills">
+<h1 class="title">Skills</h1>
+<ul class="myResume-Skills-left">
+<li>Development</li>
+<li>HTML</li>
+<li>JavaScript</li>
+<li>C language</li>
+<li>Cyber Security</li>
+</ul>
+<ul class="myResume-Skills-right">
+<li>Software</li>
+<li>ubuntu</li>
+<li>solo learning</li>
+<li>MS Office 2007-2010</li>
+<li>eclipse</li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="myResume-Education">
+<h1 class="title">Education</h1>
+<ul>
+<li>Alva's Institute of Engineering and Technology Moodabidre</li>
+</ul>
+</div>
+<div class="myResume-Experience">
+<h1 class="title">Experience</h1>
+<ul>
+<li>Web Designer,ethical hacker</li>
+</ul>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
+</body></html>
